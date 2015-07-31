@@ -1,0 +1,16 @@
+<%= form_for @post do |f| %>
+	<p>
+	<%= f.label :text, "Caption" %>
+	<%= f.text_area :text %>
+	</p>
+	<p>
+	<%= f.label :photo, "URL" %>
+	<%= f.text_area :photo %>
+	</p>
+	<p>
+	<%= label_tag ("Should this be public?") %>
+	<%= f.select :public, [true,false] %>
+	</p>
+
+	<%= f.submit %>
+<% end %>
